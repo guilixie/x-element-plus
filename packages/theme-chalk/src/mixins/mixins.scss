@@ -1,0 +1,32 @@
+@use 'config' as *;
+@forward 'config';
+// .el-button{}
+@mixin b($block) {
+  .#{$namespace + '-' + $block} {
+    @content;
+  }
+}
+// .el-button.is-xxx
+@mixin when($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
+// &--primary => .el-button--primary
+@mixin m($modifier) {
+  @at-root {
+    #{& + $modifier-separator + $modifier} {
+      @content;
+    }
+  }
+}
+// &__header => .el-button__header
+@mixin e($element) {
+  @at-root {
+    #{& + $element-separator + $element} {
+      @content;
+    }
+  }
+}

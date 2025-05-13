@@ -1,0 +1,7 @@
+{
+  "name": "@x-element-plus/components",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {},
+  "license": "MIT"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@x-element-plus/utils",
+  "private": true,
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "gulp"
+  },
+  "license": "MIT"
+}

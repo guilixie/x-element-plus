@@ -1,0 +1,69 @@
+{
+  "name": "x-element-plus",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "docs:dev": "pnpm -C docs dev",
+    "build": "gulp -f build/gulpfile.ts",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-autoprefixer": "^0.0.33",
+    "@types/gulp-clean-css": "^4.3.4",
+    "@types/gulp-sass": "^5.0.4",
+    "@types/node": "^22.15.14",
+    "@types/sass": "^1.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "eslint": "^8.19.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "fast-glob": "^3.3.3",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "hash-sum": "^2.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "mrm": "^4.1.22",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "rollup": "^4.40.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.87.0",
+    "sucrase": "^3.35.0",
+    "ts-morph": "^25.0.1",
+    "typescript": "^5.8.3",
+    "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "@x-element-plus/components": "workspace:^",
+    "@x-element-plus/theme-chalk": "workspace:^",
+    "@x-element-plus/utils": "workspace:^"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
